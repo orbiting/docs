@@ -1,8 +1,15 @@
 # How to Run
 
+Only want to run the `republik-frontend` against the production API? [See its readme](https://github.com/orbiting/republik-frontend) for an simple option.
+
 Prerequisites: Node.js 8.11 (LTS), Postgres 10, Redis 4
 
-Only want to run the `republik-frontend` against the production API? [See it's readme](https://github.com/orbiting/republik-frontend) for an simple option.
+On macOS with [homebrew](https://brew.sh/):
+```
+brew install postgresql redis nvm
+nvm install 8
+nvm alias default 8
+```
 
 ### 1. Setup the Backends
 
