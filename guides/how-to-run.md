@@ -23,7 +23,7 @@ To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the roo
 
 ##### Next Env Steps
 
-You don't need to do those immediately. But you will quickly run into errors and limitations if the envs are not set. You probably want to do the following three rather soon:
+You don't need to do those immediately. But you will quickly run into errors and limitations if those envs are not present. You probably want to do the following three rather soon:
 
 1. [Setup GitHub](https://github.com/orbiting/backends/tree/master/servers/publikator#github) 
     - `GITHUB_*` in the root `.env`
@@ -33,7 +33,7 @@ You don't need to do those immediately. But you will quickly run into errors and
 3. S3 Bucket
     - `AWS_*` in the root `.env`
 
-[For further advice consult the readme of `orbiting/backends`](https://github.com/orbiting/backends#envs), make sure to also check the readmes in the servers folders. Feel free to open issues for clarification in `orbiting/backends`.
+For further advice consult the [readme of `orbiting/backends`](https://github.com/orbiting/backends#envs).
 
 #### Seed the Database
 
