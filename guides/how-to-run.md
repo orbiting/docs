@@ -9,6 +9,7 @@ Only want to run the `republik-frontend` against the production API? [See it's r
 ```
 git clone git@github.com:orbiting/backends.git
 cd backends
+git co docs # tmp until merged
 yarn
 cp .env.example .env
 cp servers/republik/.env.example servers/republik/.env
@@ -16,11 +17,32 @@ cp servers/publikator/.env.example servers/publikator/.env
 cp servers/assets/.env.example servers/assets/.env
 ```
 
-#### Env Adaptation 
+#### Minimal Env 
 
-To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the root `.env` file. Usually you only need to change the username of the `DATABASE_URL`.
+To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the root `.env` file. The defaults may just work for you.
 
-[See readme of `orbiting/backends`](https://github.com/orbiting/backends#envs) to go beyond.
+##### Next Env Steps
+
+You don't need to do those immediately. But you will quickly run into errors and limitations if the envs are not set. You probably want to do the following three rather soon:
+
+1. [Setup GitHub](https://github.com/orbiting/backends/tree/master/servers/publikator#github) 
+  - `GITHUB_*` in the root `.env`
+2. MailChimp and Mandrill
+  - `MAILCHIMP_URL`, `MAILCHIMP_API_KEY`, `MANDRILL_API_KEY` in the root `.env`
+  - `MAILCHIMP_*` in `servers/republik/.env` (less important)
+3. S3 Bucket
+  - `AWS_*` in the root `.env`
+
+[For further advice consult the readme of `orbiting/backends`](https://github.com/orbiting/backends#envs), make sure to also check the readmes in the servers folders. Feel free to open issues for clarification in `orbiting/backends`.
+
+#### Seed the Database
+
+```
+cd servers/republik
+createdb republik
+yarn run db:migrate:up
+node seeds/seedCrowdfundings.js
+```
 
 #### Run 'Em
 
@@ -48,6 +70,11 @@ cp .env.example .env
 npm run dev
 ```
 
+Create your user:
+- open http://localhost:3010/konto
+- enter your email
+- extract the `LOGIN_LINK` from the backend log and open it
+
 #### `publikator-frontend`
 
 The editor.
@@ -60,6 +87,15 @@ cp .env.example .env
 npm run dev
 ```
 
+Give yourself premission to access:
+
+```
+cd backends
+yarn run roleUser editor you@example.com
+```
+
+You will need the `GITHUB_*` envs in the backends and `GITHUB_ORG` this frontend ready to truely use publikator.
+
 #### `republik-admin-frontend`
 
 The support interface.
@@ -70,6 +106,15 @@ cd republik-admin-frontend
 npm i
 cp .env.example .env
 npm run dev
+```
+
+Give yourself premission to access:
+
+```
+cd backends
+yarn run roleUser supporter you@example.com
+yarn run roleUser admin you@example.com
+yarn run roleUser accountant you@example.com
 ```
 
 ### 3. Setup the Styleguide
