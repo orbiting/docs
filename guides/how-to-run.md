@@ -1,8 +1,14 @@
 # How to Run
 
-Only want to run the `republik-frontend` against the production API? [See its readme](https://github.com/orbiting/republik-frontend) for an simple option.
+Previous: [Overview](./overview.md)
 
-Prerequisites: Node.js 8.11 (LTS), Postgres 10, Redis 4
+Note: Only want to run the `republik-frontend` against the production API? [See its readme](https://github.com/orbiting/republik-frontend) for an simple option.
+
+## Prerequisites
+
+- Node.js 8.11 (LTS)
+- Postgres 10
+- Redis 4
 
 On macOS with [homebrew](https://brew.sh/):
 ```
@@ -10,6 +16,12 @@ brew install postgresql redis nvm
 nvm install 8
 nvm alias default 8
 ```
+
+## Clone & Setup
+
+The setup: Get it all running locally—from backends, to frontends and the styleguide.
+
+You can skip certain frontends and the styleguide if, for example, you only want a running CMS.
 
 ### 1. Setup the Backends
 
@@ -101,7 +113,7 @@ cd backends
 yarn run roleUser editor you@example.com
 ```
 
-You will need the `GITHUB_*` envs in the backends and `GITHUB_ORG` this frontend ready to truely use publikator.
+You will need the `GITHUB_*` envs in the backends and the `GITHUB_ORG` env in this frontend ready to truely use publikator.
 
 #### `republik-admin-frontend`
 
