@@ -26,12 +26,12 @@ To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the roo
 You don't need to do those immediately. But you will quickly run into errors and limitations if the envs are not set. You probably want to do the following three rather soon:
 
 1. [Setup GitHub](https://github.com/orbiting/backends/tree/master/servers/publikator#github) 
-  - `GITHUB_*` in the root `.env`
+    - `GITHUB_*` in the root `.env`
 2. MailChimp and Mandrill
-  - `MAILCHIMP_URL`, `MAILCHIMP_API_KEY`, `MANDRILL_API_KEY` in the root `.env`
-  - `MAILCHIMP_*` in `servers/republik/.env` (less important)
+    - `MAILCHIMP_URL`, `MAILCHIMP_API_KEY`, `MANDRILL_API_KEY` in the root `.env`
+    - `MAILCHIMP_*` in `servers/republik/.env` (less important)
 3. S3 Bucket
-  - `AWS_*` in the root `.env`
+    - `AWS_*` in the root `.env`
 
 [For further advice consult the readme of `orbiting/backends`](https://github.com/orbiting/backends#envs), make sure to also check the readmes in the servers folders. Feel free to open issues for clarification in `orbiting/backends`.
 
