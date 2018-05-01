@@ -1,3 +1,6 @@
 # Docs
 
-An overview of how our repos tie and work together to run a magazine.
+An overview of how our repos tie together to run a magazine.
+
+- [Overview](./guides/overview.md)
+- [How To Run](./guides/how-to-run.md)

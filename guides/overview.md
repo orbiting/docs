@@ -27,7 +27,7 @@ republik-frontend     backends/servers/republik
 
 Admin, Writer & Publishing Tools
 
-crowdfunding-admin
+republik-admin-frontend
 mdast                 Git(Hub)
 publikator-frontend   backends/servers/publikator
                       backends/servers/assets
