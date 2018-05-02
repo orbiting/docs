@@ -2,7 +2,7 @@
 
 Prerequisites:
 
-  - All repos are properly set up (See [How To Run](./how-to-run) guide)
+  - All repos are properly set up (See [How To Run](./how-to-run.md) guide)
   - You know how to add a new React component to the [Styleguide](https://github.com/orbiting/styleguide).
   - It's probably a good idea to have a glance at [the MDAST spec](https://github.com/syntax-tree/mdast) as this is the way we programmatically handle Markdown in all of our applications.
   - While not mandatory to get started, having at least superficial knowledge of [what Slate is and how it works](https://docs.slatejs.org/) will help.  
@@ -17,9 +17,11 @@ All our articles / documents get persisted as Markdown in a given Github repo. I
 An example:
 ```
 <section><h6>FIGURE</h6>
+
   ![An image](path_to_image.jpg)
 
   An image.*By me*
+
 </section>
 ```
 
