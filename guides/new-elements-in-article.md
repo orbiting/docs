@@ -44,7 +44,7 @@ import { QA } from '@project-r/styleguide'
 </QA>
 ```
 
-##### Planning in Markdown
+#### Planning in Markdown
 
 When thinking about how your element gets persisted to Markdown, try to consider both structural requirements and readability. Here's how we could reason about our QA element:
 
@@ -64,7 +64,7 @@ So we set out for something like that:
 </section>
 ```
 
-##### Render your MDAST
+#### Render your MDAST
 
 If used with our [Markdown parser](https://github.com/orbiting/remark-preset) the snippet from above would result in the following MDAST data structure:
 
@@ -147,7 +147,9 @@ Now, if you went and manually added a QA element to one of our existing [test re
 
 Well, that doesn't sound very practical, does it.
 
-##### Show in Publikator
+#### Show in Publikator
+
+*It's probably a good time to recall that the schema is part of the [styleguide](https://github.com/orbiting/styleguide) while modules live in the [publikator-frontend](https://github.com/orbiting/publikator-frontend) repo.*
 
 To finalise the feature, we'll have to make it available to the editors in the Publikator text editor.
 
@@ -161,13 +163,14 @@ The Publikator reads from the same schema as the frontend renderer.
 In code, a module is basically a factory function, that gets called with a configuration object and should return a configured API.
 
 The configuration object is a compiled collection of schema values and instantiated child modules:
+- `name` - The module name
 - `TYPE` - A string, that should get used to name and control related Slate entities.
 - `rule` - The actual schema `rule`.
 - `subModules` - A list of instantiated modules.
 
 An instantiated module should expose an object of the following shape:
 - `helpers`
-  - `serializer` - A instance of [`MarkdownSerializer`](https://github.com/orbiting/mdast/tree/master/packages/slate-mdast-serializer)
+  - `serializer` - An instance of [`MarkdownSerializer`](https://github.com/orbiting/mdast/tree/master/packages/slate-mdast-serializer)
   - `newItem` - A function that returns a new Slate item
 - `plugins` - A list of Slate plugins
 - `ui`
@@ -181,3 +184,63 @@ The same example also shows how you can pass additional data, using the key `edi
 By default all modules get instantiated with `TYPE = moduleName.toUpperCase()`. Module infoBox becomes `INFOBOX`. And because Slate operates on unique types, we have to override this behaviour if we want to reuse existing modules. We can do that by adding the special prop `type` to `editorOptions` in the schema. Here's an example of a [module](https://github.com/orbiting/styleguide/blob/v5.73.1/src/templates/Article/index.js#L160) which is [getting reused](https://github.com/orbiting/styleguide/blob/v5.73.1/src/templates/Article/index.js#L460) [multiple times](https://github.com/orbiting/styleguide/blob/v5.73.1/src/templates/Article/index.js#L221).   
 
 What does that mean for our QA element?
+
+First, we adjust our schema. For the question, we reuse the [headline module](https://github.com/orbiting/publikator-frontend/tree/master/components/editor/modules/heading) and for the answer, we choose the [paragraph module](https://github.com/orbiting/publikator-frontend/tree/master/components/editor/modules/paragraph).
+
+Check the source for more information on what the different properties do. We basically add static text behaviour: non-splitable non-mergeable text blocks.
+
+```
+// Somehere in the import section
+import { QA } from '@project-r/styleguide'
+
+// definition block
+{
+  matchMdast: matchZone('QA'),
+  component: QA,
+  rules: [
+    {
+      matchMdast: matchHeading(6),
+      component: QA.Question,
+      rules: globalInlines,
+      // editor stuff
+      editorModule: 'headline',
+      editorOptions: {
+        depth: 6,
+        isStatic: true
+      }
+    }
+    },
+    {
+      matchMdast: matchParagraph,
+      component: QA.Answer,
+      rules: globalInlines,
+      // editor stuff
+      editorModule: 'paragraph',
+      editorOptions: {
+        isStatic: true,
+        afterType: 'PARAGRAPH',
+        insertAfterType: 'CENTER'
+      }
+    }
+  ]
+},
+```
+
+For our QA element however, we need to write a new module.
+As long as we stick to the rules from above, writing modules is pretty free form. First, we tackle the serializer.
+
+```
+export const getSerializer = ({ TYPE, rule, subModules }) => {
+
+  const questionModule = subModules.find(m => m.name === 'headline')
+  if (!questionModule) {
+    throw new Error('Missing question submodule')
+  }
+
+  const answerModule = subModules.find(m => m.name === 'paragraph')
+  if (!paragraphModule) {
+    throw new Error('Missing paragraph submodule')
+  }
+
+}
+```
