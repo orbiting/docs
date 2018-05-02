@@ -77,7 +77,8 @@ If used with our [Markdown parser](https://github.com/orbiting/remark-preset) th
       identifier: "QA",
       children: [
         {
-          type: "paragraph",
+          type: "heading",
+          depth: 6,
           children: [
             {
               type: "text",
