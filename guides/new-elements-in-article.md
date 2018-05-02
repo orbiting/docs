@@ -33,7 +33,7 @@ Here you see a so-called zone that includes 2 paragraphs. Thanks to our parser e
 
 We're going to build a small typographic helper to give editors a streamlined way of how to write and shape interview questions and answers.
 
-At this point we assume we've already have all required components ready and available from the Styleguide:
+At this point we assume already have all required components ready and available from the Styleguide:
 
 ```
 import { QA } from '@project-r/styleguide'
@@ -57,7 +57,7 @@ So we set out for something like that:
 ```
 <section><h6>QA</h6>
 
-  Her Question
+  ###### Her Question
 
   His Answer
 
