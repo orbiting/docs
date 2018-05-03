@@ -11,7 +11,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
 
 
 ## Step by step
-1. Start a new branch for your component
+1. Start a new branch for your component:
   <br />```git checkout -b mycomponent```
 2. Set up these files in /src/components/MyComponent/:<br />
     * `index.js`: Either contains the main component, or exports all components of that namespace
@@ -24,7 +24,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
 7. Commit your changes, following the [commit message format](https://github.com/orbiting/styleguide#commit-message-format), e.g.
     * `feat(MyComponent): Initial version`
     * `fix(MyComponent): layout issues on mobile`
-8. When you’re happy with your component, push your commits to the remote branch
+8. When you’re happy with your component, push your commits to the remote branch:
   <br />```git push origin mycomponent```
 9. Create a pull request.
     * Give context by describing the new feature, adding screenshots or referencing related pull requests, if any.
