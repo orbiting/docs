@@ -30,7 +30,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
     * Give context by describing the new feature, adding screenshots or referencing related pull requests, if any.
     * Assign another developer for review.
 10. Implement, commit and push changes requested during the review until the reviewer is happy.
-11. “Rebase and merge” your pull request into the master branch.
+11. “Rebase and merge” your pull request into the master branch, and delete the branch after that.
 12. The master branch will be auto-released within minutes. The version number of the release is automatically determined according to the commit messages.
 13. Bump the styleguide version in the consuming frontend repo’s `package.json` to use the new component.
 
