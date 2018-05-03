@@ -35,7 +35,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
 13. Bump the styleguide version in the consuming frontend repo’s `package.json` to use the new component.
 
 
-## Best practices
+## Best practice
 * Make your component as generic and flexible as needed, but don’t over-generalize.
 * Use [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) for any non-trivial component.
 * Break down subcomponents into separate files where possible.
