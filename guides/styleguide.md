@@ -26,11 +26,11 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
     * `fix(MyComponent): layout issues on mobile`
 8. When you’re happy with your component, push your commits to the remote branch:
   <br />```git push origin mycomponent```
-9. Create a pull request.
+9. Create a pull request on https://github.com/orbiting/styleguide/branches
     * Give context by describing the new feature, adding screenshots or referencing related pull requests, if any.
     * Assign another developer for review.
 10. Implement, commit and push changes requested during the review until the reviewer is happy.
-11. “Rebase and merge” your pull request into the master branch, and delete the branch after that.
+11. “Rebase and merge” your pull request into the master branch, and delete the `mycomponent` branch after that.
 12. The master branch will be auto-released within minutes. The version number of the release is automatically determined according to the commit messages.
 13. Bump the styleguide version in the consuming frontend repo’s `package.json` to use the new component.
 
