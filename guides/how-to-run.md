@@ -6,15 +6,21 @@ Note: Only want to run the `republik-frontend` against the production API? [See 
 
 ## Prerequisites
 
-- Node.js 8.11 (LTS)
+See [backends/package.json#engines](https://github.com/orbiting/backends/blob/master/package.json) for currently used Node.js and yarn versions.
+
 - Postgres 10
 - Redis 4
+- Node.js (LTS)
+- yarn
 
 On macOS with [homebrew](https://brew.sh/):
 ```
 brew install postgresql redis nvm
 nvm install 8
 nvm alias default 8
+npm install -g yarn@1.5
+brew services start postgresql
+brew services start redis
 ```
 
 ## Clone & Setup
@@ -28,7 +34,7 @@ You can skip certain frontends and the styleguide if, for example, you only want
 ```
 git clone git@github.com:orbiting/backends.git
 cd backends
-git co docs # tmp until merged
+git checkout docs # tmp until merged
 yarn
 cp .env.example .env
 cp servers/republik/.env.example servers/republik/.env
@@ -65,7 +71,7 @@ node seeds/seedCrowdfundings.js
 
 #### Run 'Em
 
-Use `yarn run dev` to run all servers in development.
+Use `yarn run dev` in the `backends` folder to run all servers in development.
 
 Now you should be able to access following apps:
 
@@ -73,7 +79,7 @@ Now you should be able to access following apps:
 - [Publikator API on 5010](http://localhost:5010/graphiql)
 - [Asset Server on 5020](http://localhost:5020/)
 
-Note: The asset server greets you with `Cannot GET /` on the root route.
+Note: The all servers greets you with `Cannot GET /` on the root route. The API servers have a graphical API explorer available at `/graphiql`.
 
 ### 2. Setup the Frontends 
 
@@ -112,6 +118,8 @@ Give yourself premission to access:
 cd backends
 yarn run roleUser editor you@example.com
 ```
+
+Note: Make sure to use your email address.
 
 You will need the `GITHUB_*` envs in the backends and the `GITHUB_ORG` env in this frontend ready to truely use publikator.
 
