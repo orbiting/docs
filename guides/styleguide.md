@@ -22,7 +22,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
 5. Implement your component. 
 6. You may want to test your component in a consuming frontend by [linking it locally](https://github.com/orbiting/docs/blob/master/guides/how-to-run.md#linking).
 7. Commit your changes, following the [commit message format](https://github.com/orbiting/styleguide#commit-message-format), e.g.
-    * `feat(MyComponent): Initial version`
+    * `feat(MyComponent): initial version`
     * `fix(MyComponent): layout issues on mobile`
 8. When you’re happy with your component, push your commits to the remote branch:
   <br />```git push origin mycomponent```
