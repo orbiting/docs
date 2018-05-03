@@ -13,7 +13,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
 ## Step by step
 1. Start a new branch for your component:
   <br />```git checkout -b mycomponent```
-2. Set up these files in /src/components/MyComponent/:<br />
+2. Set up these files in `/src/components/MyComponent/`:<br />
     * `index.js`: Either contains the main component, or exports all components of that namespace
     * `docs.md`: Documents the public API and various states of the component
     * Any further subcomponents or utility files you need
@@ -32,7 +32,7 @@ We use a public [styleguide](https://styleguide.republik.ch) for maintaining, do
 10. Implement, commit and push changes requested during the review until the reviewer is happy.
 11. “Rebase and merge” your pull request into master.
 12. The master branch will be auto-released within minutes. The version number of the release is automatically determined according to the commit messages.
-13. Bump the styleguide version in the consuming frontend repo’s `package.json` if you want to use the new component.
+13. Bump the styleguide version in the consuming frontend repo’s `package.json` to use the new component.
 
 
 ## Best practices
