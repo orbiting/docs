@@ -79,7 +79,7 @@ Now you should be able to access following apps:
 - [Publikator API on 5010](http://localhost:5010/graphiql)
 - [Asset Server on 5020](http://localhost:5020/)
 
-Note: The all servers greets you with `Cannot GET /` on the root route. The API servers have a graphical API explorer available at `/graphiql`.
+Note: All servers greets you with `Cannot GET /` on the root route. The API servers have a graphical API explorer available at `/graphiql`.
 
 ### 2. Setup the Frontends 
 
