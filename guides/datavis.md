@@ -11,11 +11,11 @@
 
 ## Charts in our CMS
 
-Currently we have bar and line charts, see [styleguide](https://styleguide.republik.ch/charts) for all options.
+Currently we have bar and line charts, see [styleguide](https://styleguide.republik.ch/charts) for all options and examples.
 
 ### History
 
-Originally developt for the government report [«Wellbeing in Germany»](https://www.gut-leben-in-deutschland.de/static/LB/indicators).
+Originally developed for the government report [«Wellbeing in Germany»](https://www.gut-leben-in-deutschland.de/static/LB/indicators).
 
 - maps and box plots have not been ported yet
 
@@ -26,6 +26,8 @@ Originally developt for the government report [«Wellbeing in Germany»](https:/
 3. one row per value
 
 General Advice: [Tidy Data Rulebook](https://wiederkehr.github.io/tidy-data-rulebook/) [_Benjamin Wiederkehr_](https://twitter.com/wiederkehr)
+
+Transpose—aka rotating columns to rows—in your tabulator, is your friend.
 
 ### Publikator
 
