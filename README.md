@@ -9,6 +9,7 @@ An overview of how our repos tie together to run a magazine.
 - [New Elements in Article](./guides/new-elements-in-article.md)
 - [Adding a styleguide component](./guides/new-elements-in-article.md)
 - [Datavis](./guides/datavis.md)
+- [Archive a repo's history](./guides/archive-repo-history.md)
 
 ## Concept
 
