@@ -82,6 +82,15 @@ A journalist should provide as much material as possible. No material, no fancin
 
 Interactives need time. Don't expect something next week.
 
+### Examples
+
+What have others done? Bringing examples can help building a shared understanding what is desired and accelerate the concept phase. As long as we have our own source material there is no shame in copying a concept that worked.
+
+- [NYT «2018: The Year in Visual Stories and Graphics»](https://www.nytimes.com/interactive/2018/us/2018-year-in-graphics.html)
+- [Observablehq Visualization Collection](https://observablehq.com/collection/@observablehq/visualization)
+- [Maps Collection](https://observablehq.com/collection/@observablehq/maps)
+- [Explorables Collection](https://observablehq.com/collection/@observablehq/explorables)
+
 ## Reuse
 
 Charts are optimized for this and are fast because of it. Some interactive components could be too.
