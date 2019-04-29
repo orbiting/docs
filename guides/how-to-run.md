@@ -10,17 +10,19 @@ See [backends/package.json#engines](https://github.com/orbiting/backends/blob/ma
 
 - Postgres 10
 - Redis 4
+- Elasticsearch 6
 - Node.js (LTS)
 - yarn
 
 On macOS with [homebrew](https://brew.sh/):
 ```
-brew install postgresql redis nvm
-nvm install 8
-nvm alias default 8
-npm install -g yarn@1.5
+brew install postgresql redis nvm elasticsearch
+nvm install 10
+nvm alias default 10
+npm install -g yarn@1.15
 brew services start postgresql
 brew services start redis
+brew services start elasticsearch
 ```
 
 ## Clone & Setup
@@ -34,7 +36,6 @@ You can skip certain frontends and the styleguide if, for example, you only want
 ```
 git clone git@github.com:orbiting/backends.git
 cd backends
-git checkout docs # tmp until merged
 yarn
 cp .env.example .env
 cp servers/republik/.env.example servers/republik/.env
