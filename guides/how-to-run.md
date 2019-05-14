@@ -43,7 +43,7 @@ cp servers/publikator/.env.example servers/publikator/.env
 cp servers/assets/.env.example servers/assets/.env
 ```
 
-#### Minimal Env 
+#### Minimal Env
 
 To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the root `.env` file. The defaults may just work for you.
 
@@ -51,7 +51,7 @@ To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the roo
 
 You don't need to do those immediately. But you will quickly run into errors and limitations if those envs are not present. You probably want to do the following three rather soon:
 
-1. [Setup GitHub](https://github.com/orbiting/backends/tree/master/servers/publikator#github) 
+1. [Setup GitHub](https://github.com/orbiting/backends/tree/master/servers/publikator#github)
     - `GITHUB_*` in the root `.env`
 2. MailChimp and Mandrill
     - `MAILCHIMP_URL`, `MAILCHIMP_API_KEY`, `MANDRILL_API_KEY` in the root `.env`
@@ -67,7 +67,7 @@ For further advice consult the [readme of `orbiting/backends`](https://github.co
 cd servers/republik
 createdb republik
 yarn run db:migrate:up
-node seeds/seedCrowdfundings.js
+yarn run db:seed
 ```
 
 #### Run 'Em
@@ -82,7 +82,7 @@ Now you should be able to access following apps:
 
 Note: All servers greets you with `Cannot GET /` on the root route. The API servers have a graphical API explorer available at `/graphiql`.
 
-### 2. Setup the Frontends 
+### 2. Setup the Frontends
 
 #### `republik-frontend`
 
