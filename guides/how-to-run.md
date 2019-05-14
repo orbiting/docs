@@ -8,23 +8,6 @@ Note: Only want to run the `republik-frontend` against the production API? [See 
 
 See [backends/package.json#engines](https://github.com/orbiting/backends/blob/master/package.json) for currently used Node.js and yarn versions.
 
-- Postgres 10
-- Redis 4
-- Elasticsearch 6
-- Node.js (LTS)
-- yarn
-
-On macOS with [homebrew](https://brew.sh/):
-```
-brew install postgresql redis nvm elasticsearch
-nvm install 10
-nvm alias default 10
-npm install -g yarn@1.15
-brew services start postgresql
-brew services start redis
-brew services start elasticsearch
-```
-
 ## Clone & Setup
 
 The setup: Get it all running locally—from backends, to frontends and the styleguide.
@@ -33,54 +16,8 @@ You can skip certain frontends and the styleguide if, for example, you only want
 
 ### 1. Setup the Backends
 
-```
-git clone git@github.com:orbiting/backends.git
-cd backends
-yarn
-cp .env.example .env
-cp servers/republik/.env.example servers/republik/.env
-cp servers/publikator/.env.example servers/publikator/.env
-cp servers/assets/.env.example servers/assets/.env
-```
+Follow the [How to run](https://github.com/orbiting/backends/tree/readme-quickstart#how-to-run--development) of the backends repo.
 
-#### Minimal Env
-
-To run locally you will need a working `DATABASE_URL` and `REDIS_URL` in the root `.env` file. The defaults may just work for you.
-
-##### Next Env Steps
-
-You don't need to do those immediately. But you will quickly run into errors and limitations if those envs are not present. You probably want to do the following three rather soon:
-
-1. [Setup GitHub](https://github.com/orbiting/backends/tree/master/servers/publikator#github)
-    - `GITHUB_*` in the root `.env`
-2. MailChimp and Mandrill
-    - `MAILCHIMP_URL`, `MAILCHIMP_API_KEY`, `MANDRILL_API_KEY` in the root `.env`
-    - `MAILCHIMP_*` in `servers/republik/.env` (less important)
-3. S3 Bucket
-    - `AWS_*` in the root `.env`
-
-For further advice consult the [readme of `orbiting/backends`](https://github.com/orbiting/backends#envs).
-
-#### Seed the Database
-
-```
-cd servers/republik
-createdb republik
-yarn run db:migrate:up
-yarn run db:seed
-```
-
-#### Run 'Em
-
-Use `yarn run dev` in the `backends` folder to run all servers in development.
-
-Now you should be able to access following apps:
-
-- [Republik API on 5000](http://localhost:5000/graphiql)
-- [Publikator API on 5010](http://localhost:5010/graphiql)
-- [Asset Server on 5020](http://localhost:5020/)
-
-Note: All servers greets you with `Cannot GET /` on the root route. The API servers have a graphical API explorer available at `/graphiql`.
 
 ### 2. Setup the Frontends
 
