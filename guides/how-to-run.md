@@ -16,8 +16,7 @@ You can skip certain frontends and the styleguide if, for example, you only want
 
 ### 1. Setup the Backends
 
-Follow the [How to run](https://github.com/orbiting/backends/tree/readme-quickstart#how-to-run--development) of the backends repo.
-
+See the [how to run](https://github.com/orbiting/backends#how-to-run--development) readme section of the backends repo.
 
 ### 2. Setup the Frontends
 
