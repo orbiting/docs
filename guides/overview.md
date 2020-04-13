@@ -57,12 +57,12 @@ pdf                   ElasticSearch
 
 ## Lines of Code
 
-Stand: 26.04.2018
+Stand: 13.04.2020
 
-- stylguide 36k, initial commit 5 Mar 2017
-- republik-frontend 21k, initial commit 2 Oct 2017
-- publikator-frontend 19k, initial commit 24 Jul 2017
+- stylguide 31k, initial commit 5 Mar 2017
+- republik-frontend 66k, initial commit 2 Oct 2017
+- publikator-frontend 23k, initial commit 24 Jul 2017
 - pdf 2k, initial commit 12 Dec 2017
-- backends 23k, initial commit 23 Jan 2017
+- backends 63k, initial commit 23 Jan 2017
 
 Next: [How to Run](./how-to-run.md)
