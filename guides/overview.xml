@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2020-04-24T12:55:17.462Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36" version="13.0.1" etag="yrutuMXGn0CnAYyZxHx-">
+<mxfile host="app.diagrams.net" modified="2020-04-24T12:58:49.315Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36" version="13.0.1" etag="_Gzodg0TluiqCv5oH-zY">
   <diagram id="dd387135-ac00-b6a7-8cf1-d2359d9384d1" name="Page-1">
     <mxGraphModel dx="1607" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -178,19 +178,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Uxy4ejLz54D9AS84yJE--67" value="Verlegerschaft" style="shape=mxgraph.bpmn.user_task;html=1;outlineConnect=0;rounded=0;fillColor=#ffffff;strokeColor=none;gradientColor=none;verticalAlign=bottom;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="238" width="60" height="60" as="geometry" />
+          <mxGeometry x="-150" y="240" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Uxy4ejLz54D9AS84yJE--73" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="Uxy4ejLz54D9AS84yJE--71" target="Uxy4ejLz54D9AS84yJE--58">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Uxy4ejLz54D9AS84yJE--71" value="Support" style="shape=mxgraph.bpmn.user_task;html=1;outlineConnect=0;rounded=0;fillColor=#ffffff;strokeColor=none;gradientColor=none;verticalAlign=bottom;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="358" width="60" height="60" as="geometry" />
+          <mxGeometry x="-150" y="360" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Uxy4ejLz54D9AS84yJE--74" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="Uxy4ejLz54D9AS84yJE--72" target="19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Uxy4ejLz54D9AS84yJE--72" value="Redaktion" style="shape=mxgraph.bpmn.user_task;html=1;outlineConnect=0;rounded=0;fillColor=#ffffff;strokeColor=none;gradientColor=none;verticalAlign=bottom;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="430" width="60" height="60" as="geometry" />
+          <mxGeometry x="-150" y="460" width="60" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
