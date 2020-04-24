@@ -12,7 +12,7 @@ Core Tech:
 - Git(Hub) (hosted git with a social network)
 - remark (markdown processor)
 
-![App Overview](./overview.png)
+![System Overview](./overview.png)
 
 <details><summary>Notes</summary>
 
@@ -22,6 +22,7 @@ Ecommerce and Users
 
 styleguide            postgres
 republik-frontend     backends/servers/republik
+pdf                   ElasticSearch
 
 ## Tools
 
@@ -32,10 +33,6 @@ mdast                 Git(Hub)
 publikator-frontend   backends/servers/publikator
                       backends/servers/assets
                       redis
-
-## Next
-
-pdf                   ElasticSearch
 
 </details>
 
