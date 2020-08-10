@@ -1,35 +1,42 @@
 # Membership V2
 
-```md
-user
-----
-id
-auto_renew, Boolean
-current_product, enum(ABO, BENEFACTOR_ABO, MONTHLY_ABO, ABO_GIVE_MONTHS)
+## Tables
 
+### user
 
-subscription credit
--------------------
-id
-user_id
-credit, INT, Amount of days
-createdAt
+| Field | |
+| --- | --- |
+| **`id`** | |
+| **`auto_renew`** | Boolean |
+| **`current_product`** | enum(ABO, BENEFACTOR_ABO, MONTHLY_ABO, ABO_GIVE_MONTHS) |
 
-subscription debit
-------------------
-user_id
-debit
-createdAt Date
-endedAt NULL | Date
+### subscription credit
 
-CONSTRAINT "only one active debit per user" UNIQUE(user.id, endedAt)
+| Field | |
+| --- | --- |
+| **`id`** | |
+| **`user_id`** | |
+| **`credit`** | INT, Amount of days |
+| **`createdAt`** | Date |
 
-payment history
----------------
-price
-product, enum(ABO, BENEFACTOR_ABO, MONTHLY_ABO, ABO_GIVE_MONTHS)
-subscription.id
-```
+### subscription debit
+
+| Field | |
+| --- | --- |
+| **`user_id`** | |
+| **`debit`** | |
+| **`createdAt`** | Date |
+| **`endedAt`** | NULL | Date |
+
+`CONSTRAINT "only one active debit per user" UNIQUE(user.id, endedAt)`
+
+### payment history
+
+| Field | |
+| --- | --- |
+| **`price`** | |
+| **`product`** | enum(ABO, BENEFACTOR_ABO, MONTHLY_ABO, ABO_GIVE_MONTHS) |
+| **`subscription`.id** | |
 
 ## Queries
 
