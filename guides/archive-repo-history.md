@@ -46,7 +46,6 @@ git gc --prune=all
 
 ### 4. Tags
 
-In this example, the tag `v945` was the latest version-name, applied to the latest commit. If you need to tag a previous commit with a version tag, just add the commit id after `git tag -a vxxx`
 If your repo has a `meta` tag, copy it too.
 
 ```
