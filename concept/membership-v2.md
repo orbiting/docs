@@ -22,7 +22,7 @@ debit
 createdAt Date
 endedAt NULL | Date
 
-CONSTRAINT "only one active subscription" UNIQUE(user.id, endedAt)
+CONSTRAINT "only one active debit per user" UNIQUE(user.id, endedAt)
 
 payment history
 ---------------
