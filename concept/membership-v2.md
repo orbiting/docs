@@ -4,6 +4,9 @@
 user
 ----
 id
+auto_renew, Boolean
+current_product, enum(ABO, BENEFACTOR_ABO, MONTHLY_ABO, ABO_GIVE_MONTHS)
+
 
 subscription credit
 -------------------
