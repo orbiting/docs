@@ -10,8 +10,8 @@ mutation {
     name: "gen20discharge"
     slug: "gen20discharge"
     description: "Wollen Sie dem Vorstand für das Geschäftsjahr 2019/2020 die Entlastung erteilen?"
-    beginDate: "2020-08-01"
-    endDate: "2020-12-12"
+    beginDate: "2020-08-01T12:00:00+0200"
+    endDate: "2020-12-12T00:00:00+0200"
     allowEmptyBallots: true
     allowedMemberships: [
       {membershipTypeId: "8ecd1d10-1519-4382-a401-5ec10bbec181" createdBefore: "2020-08-01"}
